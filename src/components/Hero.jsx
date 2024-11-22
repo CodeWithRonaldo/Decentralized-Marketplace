@@ -1,4 +1,5 @@
 import React from "react";
+import img from "../assets/images/marketplace.jpg";
 
 const Hero = () => {
   return (
@@ -13,6 +14,7 @@ const Hero = () => {
             transparent transaction history—all in one place
           </p>
         </div>
+
         <div className="hero-btn">
           <button className="started-btn">Get Started</button>
           <button className="buy-btn">Buy</button>

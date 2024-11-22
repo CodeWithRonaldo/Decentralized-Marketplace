@@ -19,6 +19,7 @@ body {
   justify-content: space-between;
   padding: 40px 30px;
   align-items: center;
+  flex-wrap: wrap;
 }
 .nav-left {
   display: flex;
@@ -63,6 +64,10 @@ body {
   padding: 30px;
 }
 
+/* .hero-text h1 {
+  color: rgb(255, 0, 0);
+} */
+
 .hero-text h1,
 h2 {
   margin-bottom: 20px;
@@ -76,16 +81,60 @@ h2 {
 
 .buy-btn {
   padding: 10px;
-  border-radius: 10px;
-  width: 100px;
-  background-color: rgb(250, 6, 132);
+  /* border-radius: 10px; */
+  width: 150px;
+  background-color: #509fc7;
   border: none;
+  color: white;
+  cursor: pointer;
 }
 
 .started-btn {
   padding: 10px;
-  border-radius: 10px;
-  width: 100px;
+  /* border-radius: 10px; */
+  width: 150px;
   background-color: rgb(250, 6, 132);
   border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.products-container{
+  /* align-items: center; */
+  text-align: center;
+}
+
+.products-container h1{
+  color: white;
+  padding: 20px;
+}
+
+.products {
+  display: flex;
+  justify-content: space-between;
+}
+
+.products-list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.product-card {
+  flex: 1;
+  padding: 20px 30px;
+  border: 0.5px solid #ddd;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 0 1px rgb(4, 22, 93);
+  color: white;
+  width: 200px;
+
+}
+
+.product-card:hover {
+  box-shadow: 0 0 10px rgb(4, 22, 93);
+  transform: translateY(-20px);
+}
+.bitcoin-icon {
+  size: 100px;
 }
