@@ -6,29 +6,61 @@
 }
 
 body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
-    url("./assets/images/hero-bg.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
+    url("./assets/images/images.jpg");
   background-size: cover;
   background-position: center;
   /* background: linear-gradient(); */
   height: 100vh;
 }
 
-.nav-container {
+.nav-container{
   display: flex;
   justify-content: space-between;
+  padding: 40px 30px;
   align-items: center;
-  padding: 20px 30px;
-}
 
-.nav-items {
+}
+.nav-left{
   display: flex;
-  gap: 10px;
+  gap: 40px;
+  align-items: center;
 }
 
-.hero {
-}
-
-.hero h1 {
+.nav-link{
   color: white;
+  font-size: 18px;
+  margin-left: 20px;
+  
+  
+
+}
+
+.nav-left h1 {
+  color: white;
+}
+
+.nav-right{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.search-bar{
+  padding: 10px;
+  width: 300px;
+  border: none;
+  border-radius: 10px;
+}
+
+.connect-btn{
+  border-radius: 7px;
+  padding: 10px 10px;
+  cursor: pointer;
+  background-color: #509fc7;
+  border: none;
+}
+.buy-btn{
+  background-color: #a0d2eb;
+  padding: 20px;
 }
