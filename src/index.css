@@ -14,53 +14,78 @@ body {
   height: 100vh;
 }
 
-.nav-container{
+.nav-container {
   display: flex;
   justify-content: space-between;
   padding: 40px 30px;
   align-items: center;
-
 }
-.nav-left{
+.nav-left {
   display: flex;
   gap: 40px;
   align-items: center;
 }
 
-.nav-link{
+.nav-link {
   color: white;
   font-size: 18px;
   margin-left: 20px;
-  
-  
-
 }
 
 .nav-left h1 {
   color: white;
 }
 
-.nav-right{
+.nav-right {
   display: flex;
   gap: 20px;
   align-items: center;
 }
 
-.search-bar{
+.search-bar {
   padding: 10px;
   width: 300px;
   border: none;
   border-radius: 10px;
 }
 
-.connect-btn{
+.connect-btn {
   border-radius: 7px;
   padding: 10px 10px;
   cursor: pointer;
-  background-color: #509fc7;
+  background-color: rgb(250, 6, 132);
   border: none;
 }
-.buy-btn{
-  background-color: #a0d2eb;
-  padding: 20px;
+.hero-text {
+  width: 60%;
+  color: white;
+  font-size: 20px;
+  padding: 30px;
+}
+
+.hero-text h1,
+h2 {
+  margin-bottom: 20px;
+}
+
+.hero-btn {
+  display: flex;
+  gap: 20px;
+  padding: 5px 30px;
+}
+
+.buy-btn {
+  padding: 10px;
+  border-radius: 10px;
+  width: 100px;
+  background-color: rgb(250, 6, 132);
+  border: none;
+}
+
+.started-btn {
+  padding: 10px;
+  border-radius: 10px;
+  width: 100px;
+  background-color: rgb(250, 6, 132);
+  border: none;
 }
