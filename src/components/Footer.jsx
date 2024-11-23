@@ -5,7 +5,8 @@ const Footer = () => {
     <footer className="marquee-container">
       <marquee>
         Welcome to the Decentralized Product Marketplace! | Buy, Sell, and Trade
-        Securely on the Blockchain! 🚀
+        Securely on the Blockchain! 🚀 © Abdulkudus 2024 
+    
       </marquee>
     </footer>
   );

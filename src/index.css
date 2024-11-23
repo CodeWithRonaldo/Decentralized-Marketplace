@@ -62,9 +62,7 @@ body {
   color: white;
   font-size: 20px;
   padding: 60px 30px;
-  
 }
-
 
 .hero-text h1,
 h2 {
@@ -97,47 +95,118 @@ h2 {
 }
 
 .products-container {
-  text-align: center;
+  /* text-align: center; */
+  padding: 10px 100px;
+  /* align-items: center; */
 }
 
 .products-container h1 {
   color: white;
-  padding: 20px;
+  text-align: center;
+  padding: 40px ;
+  
 }
 
 .products {
   display: flex;
   justify-content: space-between;
+ 
 }
 
 .products-list {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
+  align-items: center;
+  
 }
 .product-card {
   flex: 1;
-  padding: 20px 30px;
+  padding: 20px ;
   border: 0.5px solid #ddd;
   transition: all 0.3s ease;
   border-radius: 10px;
   box-shadow: 0 0 1px rgb(4, 22, 93);
   color: white;
-  width: 200px;
+  max-width: 250px;
 }
 
 .product-card:hover {
   box-shadow: 0 0 10px rgb(4, 22, 93);
   transform: translateY(-20px);
 }
-.bitcoin-icon {
-  size: 100px;
+.product-card p {
+  padding: 5px;
+}
+
+.add-cart{
+  display: flex;
+  gap: 10px;
+  font-size: 15px;
+}
+
+.product-card button {
+  background-color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+.cart-icon {
+  color: red;
+  /* font-size: 20px; */
+  
+  
 }
 
 .marquee-container {
   color: #fff;
-  padding-top: 70px ;
+  padding-top: 70px;
   font-size: 1.2rem;
-  
 }
 
+
+.transaction-container{
+  color: white;
+  padding: 50px;
+  max-width: 70%;
+  
+}
+.transaction-search-bar input{
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.head-filter{
+  display: flex;
+  justify-content: space-between;
+}
+
+.transaction-history{
+  text-align: center;
+  display: flex;
+  gap: 20px;
+  
+
+}
+
+table{
+  border-collapse: collapse;
+  width: 100%;
+  
+  /* padding: 0; */
+  /* border: 1px solid #ddd; */
+  font-size: 1.2rem;
+  font-family: Arial, sans-serif;
+  margin-top: 20px;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  }
