@@ -5,7 +5,7 @@ const TransactionHistory = () => {
     <>
     <div className="transaction-container">
     <div className="transaction-search-bar">
-        <input type="search" placeholder="Search transaction history"/>
+        <input type="search" placeholder="Search transaction history" className="search-bar-input"/>
       </div>
       <div className="head-filter">
         <h1>Transactions</h1>
@@ -18,7 +18,7 @@ const TransactionHistory = () => {
         </select>
       </div>
       <div className="transaction-history">
-        <table className="table table-striped table-bordered">
+        <table className="transaction-table">
           <thead>
             <tr>
               <th>Transaction ID</th>

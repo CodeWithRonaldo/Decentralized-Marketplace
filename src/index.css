@@ -103,14 +103,12 @@ h2 {
 .products-container h1 {
   color: white;
   text-align: center;
-  padding: 40px ;
-  
+  padding: 40px;
 }
 
 .products {
   display: flex;
   justify-content: space-between;
- 
 }
 
 .products-list {
@@ -118,11 +116,10 @@ h2 {
   gap: 30px;
   flex-wrap: wrap;
   align-items: center;
-  
 }
 .product-card {
   flex: 1;
-  padding: 20px ;
+  padding: 20px;
   border: 0.5px solid #ddd;
   transition: all 0.3s ease;
   border-radius: 10px;
@@ -139,7 +136,7 @@ h2 {
   padding: 5px;
 }
 
-.add-cart{
+.add-cart {
   display: flex;
   gap: 10px;
   font-size: 15px;
@@ -156,8 +153,6 @@ h2 {
 .cart-icon {
   color: red;
   /* font-size: 20px; */
-  
-  
 }
 
 .marquee-container {
@@ -166,14 +161,18 @@ h2 {
   font-size: 1.2rem;
 }
 
-
-.transaction-container{
+.transaction-container {
+  display: flex;
+  flex-direction: column;
   color: white;
-  padding: 50px;
-  max-width: 70%;
-  
+  padding: 70px;
+  align-items: center;
+  max-width: 100%;
 }
-.transaction-search-bar input{
+.transaction-search-bar {
+  width: 70%;
+}
+.search-bar-input {
   padding: 10px;
   border: none;
   border-radius: 10px;
@@ -181,32 +180,75 @@ h2 {
   width: 100%;
   margin-bottom: 20px;
 }
-
-.head-filter{
+.head-filter {
   display: flex;
   justify-content: space-between;
+  width: 70%;
+  margin-bottom: 20px;
 }
 
-.transaction-history{
+.transaction-history {
   text-align: center;
   display: flex;
   gap: 20px;
-  
-
+  width: 70%;
 }
 
-table{
+/* table {
   border-collapse: collapse;
   width: 100%;
-  
+  background-attachment: white;
+
   /* padding: 0; */
-  /* border: 1px solid #ddd; */
-  font-size: 1.2rem;
+/* border: 1px solid #ddd; */
+/* font-size: 1.2rem;
   font-family: Arial, sans-serif;
   margin-top: 20px;
-}
-th, td {
+} */
+/* th
+td {
   border: 1px solid #ddd;
   padding: 10px;
   text-align: left;
-  }
+} */
+*/ table {
+  /* width: 100%; */
+  font-family: sans-serif;
+  border-collapse: collapse;
+  /* overflow: hidden; */
+  box-shadow: 0 0 20px #0000001a;
+}
+
+.transaction-table {
+  width: 100%;
+}
+th,
+td {
+  background-color: #ffffff33;
+  padding: 15px;
+  color: #fff;
+}
+th {
+  text-align: left;
+}
+
+thead th {
+  background-color: #55608f;
+}
+
+tbody tr:hover {
+  background-color: #ffffff4d;
+}
+tbody td {
+  /* position: relative; */
+}
+tbody td:hover:before {
+  /* content: ""; */
+  /* position: absolute; */
+  background-color: #ffffff33;
+  /* left: 0;
+  right: 0; */
+  /* top: -9999px;
+  bottom: -9999px; */
+  /* z-index: -1; */
+}
