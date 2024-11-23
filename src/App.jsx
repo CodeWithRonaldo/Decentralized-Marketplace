@@ -5,6 +5,7 @@ import TransactionHistory from "./components/TransactionHistory";
 import AddProductForm from "./components/AddProductForm";
 import Home from "./components/Home";
 import Products from "./components/Products";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/transaction-history" element={<TransactionHistory />} />
           <Route path="/add-products" element={<AddProductForm />} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </>
   );

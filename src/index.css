@@ -61,12 +61,10 @@ body {
   width: 60%;
   color: white;
   font-size: 20px;
-  padding: 30px;
+  padding: 60px 30px;
+  
 }
 
-/* .hero-text h1 {
-  color: rgb(255, 0, 0);
-} */
 
 .hero-text h1,
 h2 {
@@ -91,7 +89,6 @@ h2 {
 
 .started-btn {
   padding: 10px;
-  /* border-radius: 10px; */
   width: 150px;
   background-color: rgb(250, 6, 132);
   border: none;
@@ -99,12 +96,11 @@ h2 {
   cursor: pointer;
 }
 
-.products-container{
-  /* align-items: center; */
+.products-container {
   text-align: center;
 }
 
-.products-container h1{
+.products-container h1 {
   color: white;
   padding: 20px;
 }
@@ -128,7 +124,6 @@ h2 {
   box-shadow: 0 0 1px rgb(4, 22, 93);
   color: white;
   width: 200px;
-
 }
 
 .product-card:hover {
@@ -138,3 +133,11 @@ h2 {
 .bitcoin-icon {
   size: 100px;
 }
+
+.marquee-container {
+  color: #fff;
+  padding-top: 70px ;
+  font-size: 1.2rem;
+  
+}
+
