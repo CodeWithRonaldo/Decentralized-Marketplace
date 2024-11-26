@@ -6,7 +6,7 @@ import doodlesix from "../assets/images/doodle6.png";
 import doodlefive from "../assets/images/doodle5.png";
 import { GrCart } from "react-icons/gr";
 
-const items = [
+export const items = [
   {
     id: 1,
     name: "#9340",
@@ -79,7 +79,7 @@ const items = [
   },
 ];
 
-const Products = () => {
+const Marketplace = () => {
   return (
     <>
       <div className="products-container">
@@ -104,4 +104,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Marketplace;

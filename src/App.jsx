@@ -4,8 +4,8 @@ import NavBar from "./components/NavBar";
 import TransactionHistory from "./components/TransactionHistory";
 import AddProductForm from "./components/AddProductForm";
 import Home from "./components/Home";
-import Products from "./components/Products";
 import Footer from "./components/Footer";
+import Marketplace from "./components/Marketplace";
 
 function App() {
   return (
@@ -14,11 +14,11 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
+          <Route path="/market-place" element={<Marketplace />} />
           <Route path="/transaction-history" element={<TransactionHistory />} />
           <Route path="/add-products" element={<AddProductForm />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     </>
   );
