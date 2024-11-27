@@ -10,7 +10,6 @@ A blockchain-based platform that enables users to list, view, and buy products. 
 
 # Progress So Far
 
-## Frontend Development
 
 - Built a responsive UI with React.js.
 - Created a product listing page that dynamically displays products using the `map()` method.
