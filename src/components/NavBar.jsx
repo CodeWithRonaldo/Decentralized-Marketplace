@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { IoPersonCircleOutline } from "react-icons/io5";
 
 const NavBar = () => {
   return (
@@ -31,6 +32,10 @@ const NavBar = () => {
           className="search-bar"
         />
         <button className="connect-btn">Connect Wallet</button>
+        
+        <IoPersonCircleOutline className="profile-icon" />
+
+
       </div>
     </div>
   );
