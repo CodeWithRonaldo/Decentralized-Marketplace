@@ -22,9 +22,9 @@ const TransactionHistory = () => {
           <thead>
             <tr>
               <th>Transaction ID</th>
-              <th>Transaction Date</th>
-              <th>Transaction Type</th>
-              <th>Transaction Amount</th>
+              <th> Date</th>
+              <th>Type</th>
+              <th> Amount</th>
             </tr>
           </thead>
           <tbody>

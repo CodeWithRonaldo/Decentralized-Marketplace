@@ -1,5 +1,6 @@
 import React from "react";
 import img from "../assets/images/marketplace.jpg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -16,8 +17,13 @@ const Hero = () => {
         </div>
 
         <div className="hero-btn">
-          <button className="started-btn">Get Started</button>
-          <button className="buy-btn">Buy</button>
+          <Link to="/add-products">
+            <button className="started-btn">Sell</button>
+          </Link>
+
+          <Link to="/market-place">
+            <button className="buy-btn">Buy</button>
+          </Link>
         </div>
       </div>
     </>

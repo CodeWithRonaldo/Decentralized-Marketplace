@@ -10,76 +10,85 @@ export const items = [
   {
     id: 1,
     name: "#9340",
-    description: 'A breathtaking digital city pulsating with quantum energy.',
+    description: "A breathtaking digital city pulsating with quantum energy.",
     price: 100,
     image: doodleone,
   },
   {
     id: 2,
     name: "#9494",
-    description: 'A breathtaking digital city pulsating with quantum energy. ',
+    description: "A breathtaking digital city pulsating with quantum energy. ",
     price: 200,
     image: doodletwo,
   },
   {
     id: 3,
     name: "#8439",
-    description: 'A breathtaking digital city pulsating with quantum energy. ',
+    description: "A breathtaking digital city pulsating with quantum energy. ",
     price: 300,
     image: doodlethree,
   },
   {
     id: 4,
     name: "#9830",
-    description: 'A breathtaking digital city pulsating with quantum energy.',
+    description: "A breathtaking digital city pulsating with quantum energy.",
     price: 400,
     image: doodlefive,
   },
   {
     id: 5,
     name: "#9939",
-    description: 'A breathtaking digital city pulsating with quantum energy. This artwork is ideal for collectors',
+    description:
+      "A breathtaking digital city pulsating with quantum energy. This artwork is ideal for collectors",
     price: 500,
     image: doodlesix,
   },
   {
     id: 6,
     name: "#9303",
-    description: 'A breathtaking digital city pulsating with quantum energy. This artwork is ideal for collectors',
+    description:
+      "A breathtaking digital city pulsating with quantum energy. This artwork is ideal for collectors",
     price: 500,
     image: doodlesix,
   },
   {
     id: 7,
     name: "#9922",
-    description: 'A breathtaking digital city pulsating with quantum energy. This artwork is ideal for collectors',
+    description:
+      "A breathtaking digital city pulsating with quantum energy. This artwork is ideal for collectors",
     price: 500,
     image: doodlesix,
   },
   {
     id: 8,
     name: "#0382",
-    description: 'A breathtaking digital city pulsating with quantum energy. This artwork is ideal for collectors',
+    description:
+      "A breathtaking digital city pulsating with quantum energy. This artwork is ideal for collectors",
     price: 500,
     image: doodlesix,
   },
   {
     id: 9,
     name: "#6393",
-    description: 'A breathtaking digital city pulsating with quantum energy. This artwork is ideal for collectors',
+    description:
+      "A breathtaking digital city pulsating with quantum energy. This artwork is ideal for collectors",
     price: 500,
     image: doodletwo,
   },
   {
     id: 10,
     name: "#3702",
-    description: 'A breathtaking digital city pulsating with quantum energy. This artwork is ideal for collectors',
+    description:
+      "A breathtaking digital city pulsating with quantum energy. This artwork is ideal for collectors",
     price: 800,
     image: doodlefive,
   },
 ];
 
 const Marketplace = () => {
+  const handleBuy = () => {
+    alert("Order Placed Successfully");
+  };
   return (
     <>
       <div className="products-container">
@@ -94,7 +103,10 @@ const Marketplace = () => {
                 <h2>{item.name}</h2>
                 <p>{item.description}</p>
                 <p>Price: ${item.price}</p>
-                <button className="add-cart">Add to cart <GrCart className="cart-icon" /></button>
+                <button className="add-cart" onClick={handleBuy}>
+                  Buy Now
+                  <GrCart className="cart-icon" />
+                </button>
               </li>
             ))}
           </ul>

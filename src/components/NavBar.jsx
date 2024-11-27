@@ -6,7 +6,7 @@ const NavBar = () => {
     <div className="nav-container">
       <div className="nav-left">
         <div>
-          <h1>LOGO</h1>
+          <h1>CryptoMart</h1>
         </div>
         <div>
           <NavLink to="/" className="nav-link">
@@ -22,10 +22,14 @@ const NavBar = () => {
       </div>
 
       <div className="nav-right">
-      <NavLink to="/add-products" className="nav-link">
-            Add Products
-          </NavLink>
-        <input type="text" placeholder="Search for collections, NFTs or users" className="search-bar" />
+        <NavLink to="/add-products" className="nav-link">
+          Add Products
+        </NavLink>
+        <input
+          type="text"
+          placeholder="Search for collections, NFTs or users"
+          className="search-bar"
+        />
         <button className="connect-btn">Connect Wallet</button>
       </div>
     </div>
