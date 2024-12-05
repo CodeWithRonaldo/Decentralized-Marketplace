@@ -364,7 +364,7 @@ input[type="file"] {
 .footer-links a:hover,
 .footer-social a:hover {
   text-decoration: underline;
-  color: #ffcc00;
+  color: red;
 }
 
 .footer-copy {
