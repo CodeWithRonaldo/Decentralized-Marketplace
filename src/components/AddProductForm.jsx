@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
-
-import { items } from "./Marketplace";
+import { addProduct } from "../contractAP";
 
 const AddProductForm = () => {
   const [name, setName] = useState("");
@@ -9,16 +8,17 @@ const AddProductForm = () => {
   const [description, setDescription] = useState("");
   const [imageUrl, setImageUrl] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const newProduct = {
-      id: items.length + 1,
-      name,
-      price,
-      description,
-      imageUrl,
-    };
-    items.push(newProduct);
+    await addProduct(name, description, price, imageUrl);
+    // const newProduct = {
+    //   id: items.length + 1,
+    //   name,
+    //   price,
+    //   description,
+    //   imageUrl,
+    // };
+    // items.push(newProduct);
     setName("");
     setPrice("");
     setDescription("");
@@ -45,7 +45,6 @@ const AddProductForm = () => {
             <label htmlFor="price">Price</label>
             <input
               type="number"
-              min="1"
               className="form-price"
               placeholder="Enter price"
               value={price}

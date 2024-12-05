@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="footer-container">
       <div className="footer-links">
         <ul>
-        <h3>Quick Links</h3>
+          <h3>Quick Links</h3>
           <li>
             <a href="/about">About Us</a>
           </li>
@@ -28,33 +28,18 @@ const Footer = () => {
       </div>
       <div className="footer-social">
         <ul>
-        <h3>Follow Us</h3>
+          <h3>Follow Us</h3>
           <li>
             <a href="https://twitter.com/">Twitter</a>
           </li>
           <li>
-            <a
-              href="https://discord.gg/"
-              
-            >
-              Discord
-            </a>
+            <a href="https://discord.gg/">Discord</a>
           </li>
           <li>
-            <a
-              href="https://github.com/CodeWithRonaldo"
-             
-            >
-              GitHub
-            </a>
+            <a href="https://github.com/CodeWithRonaldo">GitHub</a>
           </li>
           <li>
-            <a
-              href="https://medium.com/"
-              t
-            >
-              Medium
-            </a>
+            <a href="https://medium.com/">Medium</a>
           </li>
         </ul>
       </div>

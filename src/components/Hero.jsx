@@ -1,5 +1,4 @@
 import React from "react";
-import img from "../assets/images/marketplace.jpg";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
