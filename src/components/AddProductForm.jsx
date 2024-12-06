@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { addProduct } from "../contractAP";
+// import { addProduct } from "../contractAP";
 
 const AddProductForm = () => {
   const [name, setName] = useState("");
@@ -11,14 +11,7 @@ const AddProductForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await addProduct(name, description, price, imageUrl);
-    // const newProduct = {
-    //   id: items.length + 1,
-    //   name,
-    //   price,
-    //   description,
-    //   imageUrl,
-    // };
-    // items.push(newProduct);
+   
     setName("");
     setPrice("");
     setDescription("");

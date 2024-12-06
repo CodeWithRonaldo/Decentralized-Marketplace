@@ -1,16 +1,29 @@
-import React from "react";
-import { getTransactions } from "../contractAP";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { ethers } from "ethers";
+import main from "../contractAP"; // Adjust the import path accordingly
+
 const TransactionHistory = () => {
   const [transaction, setTransaction] = useState([]);
+  const [contractFunctions, setContractFunctions] = useState(null);
+
+  useEffect(() => {
+    const initializeContract = async () => {
+      const functions = await main(); // Call the main function to get contract functions
+      setContractFunctions(functions);
+    };
+    initializeContract();
+  }, []);
+
   useEffect(() => {
     const fetchTransactions = async () => {
-      const tx = await getTransactions();
-      setTransaction(tx);
+      if (contractFunctions) {
+        const tx = await contractFunctions.getTransactions();
+        setTransaction(tx);
+      }
     };
     fetchTransactions();
-  }, []);
+  }, [contractFunctions]);
+
   return (
     <>
       <div className="transaction-container">
@@ -36,9 +49,9 @@ const TransactionHistory = () => {
             <thead>
               <tr>
                 <th>Seller Address</th>
-                <th> Buyer Address</th>
+                <th>Buyer Address</th>
                 <th>Date</th>
-                <th> Amount</th>
+                <th>Amount</th>
               </tr>
             </thead>
             <tbody>
@@ -58,7 +71,7 @@ const TransactionHistory = () => {
                         transact.timestamp.toString() * 1000
                       ).toLocaleString()}
                     </td>
-                    <td>{ethers.formatEther(transact.amount)}</td>
+                    <td>{transact.amount}</td>
                   </tr>
                 );
               })}
