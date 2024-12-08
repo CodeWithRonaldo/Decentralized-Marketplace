@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useCallback } from "react";
 import { walletContext } from "../App";
 import { GrCart } from "react-icons/gr";
 import main from "../contractAP";
@@ -8,23 +8,28 @@ const Marketplace = () => {
   const [products, setProducts] = useState([]);
   const { isConnected } = useContext(walletContext);
 
-  useEffect(() => {
-    const getProducts = async () => {
-      if (isConnected) {
-        const mainFunction = await main();
-        console.log(mainFunction);
-        const product = await mainFunction.listProducts();
-        console.log(product);
+  const getProducts = useCallback(async () => {
+    if (isConnected) {
+      const mainFunction = await main();
+      console.log(mainFunction);
+      const product = await mainFunction.listProducts();
+      const filteredProduct = product.filter((prods) => prods.isSold === false);
+      
 
-        setProducts(product);
-        console.log("product fetched successfully");
-      }
-    };
-    getProducts();
+      setProducts(filteredProduct);
+      
+    }
   }, [isConnected]);
+
+  useEffect(() => {
+    getProducts();
+    
+  }, [getProducts]);
   const handleBuy = async (id, price) => {
-    // await buyProduct(id, price);
+    const mainFunction = await main();
+    await mainFunction.buyProduct(id, price);
     alert("Order Placed Successfully");
+    await getProducts();
   };
   return (
     <>

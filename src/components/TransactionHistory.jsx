@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ethers } from "ethers";
-import main from "../contractAP"; // Adjust the import path accordingly
+import main from "../contractAP";
 
 const TransactionHistory = () => {
   const [transaction, setTransaction] = useState([]);
@@ -8,7 +8,7 @@ const TransactionHistory = () => {
 
   useEffect(() => {
     const initializeContract = async () => {
-      const functions = await main(); // Call the main function to get contract functions
+      const functions = await main();
       setContractFunctions(functions);
     };
     initializeContract();
@@ -18,6 +18,8 @@ const TransactionHistory = () => {
     const fetchTransactions = async () => {
       if (contractFunctions) {
         const tx = await contractFunctions.getTransactions();
+        console.log(tx);
+
         setTransaction(tx);
       }
     };
@@ -71,7 +73,7 @@ const TransactionHistory = () => {
                         transact.timestamp.toString() * 1000
                       ).toLocaleString()}
                     </td>
-                    <td>{transact.amount}</td>
+                    <td>{ethers.formatEther(transact.amount)}</td>
                   </tr>
                 );
               })}

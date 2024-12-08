@@ -5,7 +5,7 @@ import { walletContext } from "../App";
 
 const NavBar = () => {
   // const [isConnected, setIsConnected] = React.useState(false);
-  const { connectWallet, isConnected, account } = useContext(walletContext);
+  const { connectWallet, isConnected, account, disconnectWallet } = useContext(walletContext);
 
   return (
     <div className="nav-container">
@@ -35,7 +35,7 @@ const NavBar = () => {
           placeholder="Search for collections, NFTs or users"
           className="search-bar"
         />
-        <button onClick={connectWallet} className="connect-btn">
+        <button onClick={isConnected ? disconnectWallet: connectWallet} className="connect-btn">
           {isConnected
             ? `${account.slice(0, 6)}...${account.slice(-4, -1)}`
             : "Connect Wallet"}
