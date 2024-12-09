@@ -151,6 +151,7 @@ h2 {
   box-shadow: 0 0 1px rgb(4, 22, 93);
   color: white;
   max-width: 250px;
+  /* max-height: 450px; */
 }
 
 .product-card:hover {
